@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UFarm Project</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <style>
+      /* Custom styles for UFarm Project */
+      .form-heading {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .form-label {
+        font-weight: bold;
+      }
+
+      .form-submit {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">UFarm Project</h1>
+
+      <!-- Registration Form -->
+      <div class="card">
+        <div class="card-header">Register FarmerOne (FO)</div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label class="form-label">Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Ward:</label>
+              <select class="form-control" required>
+                <option value="">Select ward</option>
+                <option value="Ward A">Ward A</option>
+                <option value="Ward B">Ward B</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Unique FO number:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter unique FO number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Date of registration:</label>
+              <input type="date" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Gender:</label>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="gender-male"
+                  value="male"
+                  required
+                />
+                <label class="form-check-label" for="gender-male"> Male </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="gender-female"
+                  value="female"
+                  required
+                />
+                <label class="form-check-label" for="gender-female">
+                  Female
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Date of birth:</label>
+              <input type="date" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Activities involved in:</label>
+              <textarea
+                class="form-control"
+                placeholder="Enter activities involved in"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">NIN number:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter NIN number"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone number:</label>
+              <input
+                type="tel"
+                class="form-control"
+                placeholder="Enter phonenumber"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Directions to home:</label>
+              <textarea
+                class="form-control"
+                placeholder="Enter directions to home"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Residence type:</label>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="residence"
+                  id="residence-rented"
+                  value="rented"
+                  required
+                />
+                <label class="form-check-label" for="residence-rented">
+                  Rented
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="residence"
+                  id="residence-owned"
+                  value="owned"
+                  required
+                />
+                <label class="form-check-label" for="residence-owned">
+                  Owned
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label"
+                >Period of stay in the ward (in years):</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Enter period of stay in the ward (in years)"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Access Registered FOs -->
+      <div class="card mt-4">
+        <div class="card-header">Access registered FOs</div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Ward</th>
+                <th>Unique FO Number</th>
+                <th>Date of Registration</th>
+                <th>Gender</th>
+                <th>Date of Birth</th>
+                <th>Activities Involved In</th>
+                <th>NIN Number</th>
+                <th>Phone Number</th>
+                <th>Directions to Home</th>
+                <th>Residence Type</th>
+                <th>Period of Stay in the Ward (in years)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John Doe</td>
+                <td>Ward A</td>
+                <td>FO12345</td>
+                <td>2021-03-09</td>
+                <td>Male</td>
+                <td>1985-06-12</td>
+                <td>Farming, Poultry</td>
+                <td>123456789</td>
+                <td>08012345678</td>
+                <td>123 Street, City</td>
+                <td>Owned</td>
+                <td>15</td>
+              </tr>
+              <!-- Add more FOs here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Update FO Information -->
+      <div class="card mt-4">
+        <div class="card-header">Update FO Information</div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label class="form-label">Select FO:</label>
+              <select class="form-control" required>
+                <option value="">Select FO</option>
+                <option value="FO12345">FO12345 - John Doe</option>
+                <!-- Add more FOs here -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Activities Involved In:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter activities involved in"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number:</label>
+              <input
+                type="tel"
+                class="form-control"
+                placeholder="Enter phone number"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              Update
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Appoint New FO -->
+      <div class="card mt-4">
+        <div class="card-header">Appoint New FO</div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label class="form-label">Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Ward:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter ward"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Unique FO Number:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter unique FO number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Date of Registration:</label>
+              <input type="date" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Gender:</label>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="gender-male"
+                  value="male"
+                  required
+                />
+                <label class="form-check-label" for="gender-male"> Male </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="gender-female"
+                  value="female"
+                  required
+                />
+                <label class="form-check-label" for="gender-female">
+                  Female
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Date of Birth:</label>
+              <input type="date" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Activities Involved In:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter activities involved in"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">NIN Number:</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Enter NIN number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number:</label>
+              <input
+                type="tel"
+                class="form-control"
+                placeholder="Enter phone number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Directions to home:</label>
+              <textarea
+                class="form-control"
+                placeholder="Enter directions to home"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Residence type:</label>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="residence"
+                  id="residence-rented"
+                  value="rented"
+                  required
+                />
+                <label class="form-check-label" for="residence-rented">
+                  Rented
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="residence"
+                  id="residence-owned"
+                  value="owned"
+                  required
+                />
+                <label class="form-check-label" for="residence-owned">
+                  Owned
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Period of Stay in Ward (years):</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Enter period of stay in ward"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              Appoint FO
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Create Authentication Details -->
+      <div class="card mt-4">
+        <div class="card-header">Create Authentication Details</div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label class="form-label">Username:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter username"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Password:</label>
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Enter password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              Create
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
